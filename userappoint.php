@@ -19,24 +19,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = $_POST['name'];
     $email = $_POST['email'];
     $gender = $_POST['gender'];
-    $qualification = $_POST['qualification'];
-    $experience = $_POST['experience'];
-    $phone = $_POST['phone'];
     $city = $_POST['city'];
     $state = $_POST['state'];
     $zip = $_POST['zip'];
-    $fees = $_POST['fees'];
+    $phone = $_POST['phone'];
+    $score = $_POST['score'];
+    $counsellorid = $_POST['counsellorid']; // Use the value passed from the form
+// $counsellorid = 1;
+ 
 
     // Prepare and bind SQL statement
-    $stmt = $conn->prepare("INSERT INTO counsellor (name, email, gender, qualification, experience, phone, city, state, zip, fees) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
-    $stmt->bind_param("ssssssssss", $name, $email, $gender, $qualification, $experience, $phone, $city, $state, $zip, $fees);
+    $stmt = $conn->prepare("INSERT INTO user (name, email, gender, city, state, zip, phone, score, counsellorid) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
+    $stmt->bind_param("sssssssss", $name, $email, $gender, $city, $state, $zip, $phone, $score, $counsellorid);
 
     // Execute SQL statement
     if ($stmt->execute()) {
-      //  echo "Form data saved successfully.";
+       // echo "Form data saved successfully.";
          header("Location: thankyou.html");
         exit();
-        
     } else {
         echo "Error: " . $stmt->error;
     }
@@ -47,4 +47,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 // Close connection
 $conn->close();
+
 ?>
