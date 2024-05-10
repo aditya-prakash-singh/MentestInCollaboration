@@ -1,0 +1,64 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+	background: #fedbc5;
+}
+
+.box {
+	width: 20%; /* Set width relative to the viewport width */
+	padding: 5%; /* Set padding relative to the width */
+	position: absolute;
+	top: 50%; /* Adjusted top instead of transform for vertical centering */
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background: black;
+	text-align: center;
+	border-radius: 4vw; /* Set border radius relative to viewport width */
+	border: 0.5vw solid white; /* Set border width relative to viewport width */
+}
+
+.box h1 {
+	color: white;
+	text-transform: uppercase;
+	font-weight: 500;
+}
+
+.box input[type="text"],
+.box input[type="password"] {
+	background: black;
+	display: block;
+	margin: 5% auto; /* Set margin relative to the width */
+	text-align: center;
+	border: 2px solid #3498db;
+	padding: 4% 3%; /* Set padding relative to the width */
+	width: 70%; /* Set width relative to the width of parent container */
+	outline: none;
+	color: white;
+	border-radius: 1vw; /* Set border radius relative to viewport width */
+	transition: 0.25s;
+}
+
+.box input[type="text"]:focus,
+.box input[type="password"]:focus {
+	width: 90%; /* Adjusted width on focus */
+	border-color: #2ecc71;
+}
+
+.box input[type="submit"] {
+	background: black;
+	display: block;
+	margin: 5% auto; /* Set margin relative to the width */
+	text-align: center;
+	border: 2px solid #3498db;
+	padding: 4% 10%; /* Set padding relative to the width */
+	outline: none;
+	color: white;
+	border-radius: 1vw; /* Set border radius relative to viewport width */
+	transition: 0.25s;
+	cursor: pointer;
+}
+
+.box input[type="submit"]:hover {
+	background: #2ecc71;
+}
