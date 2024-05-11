@@ -41,7 +41,7 @@ body {
 .mode {
     position: fixed;
     right: 20px;
-    top: 25px;
+    top: 13px;
     color: var(--txt-color);
 }
 li {
