@@ -25,6 +25,7 @@ body {
 }
 
 .box input[type="text"],
+.box input[type="email"],
 .box input[type="password"] {
 	background: black;
 	display: block;
@@ -40,6 +41,7 @@ body {
 }
 
 .box input[type="text"]:focus,
+.box input[type="email"]:focus,
 .box input[type="password"]:focus {
 	width: 90%; /* Adjusted width on focus */
 	border-color: #2ecc71;
